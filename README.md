@@ -6,13 +6,46 @@ Please fill in your information after forking this repository:
 - **Name**: Mustafa Enes Kalkan
 
 ## Project Description
-Missing Podo: The Ankara Case — a small investigation dashboard built with the Next.js App Router.
+Missing Podo: The Ankara Case — a small investigation dashboard built with the **Next.js App Router** (React Server Components + Client Components).
 
-It fetches submissions from multiple Jotform forms (Checkins, Messages, Sightings, Personal Notes, Anonymous Tips), normalizes them into a single timeline, and lets you:
+### Tech stack & choices
 
-- Browse people mentioned across records
-- Search/filter by person, location, or content
-- Open a record detail view and see linked records (shared people)
+#### Framework
+- **Next.js (App Router)**: chosen to keep the app “backend-driven” while still being a single deployable frontend.
+	- Server-side data fetching from Jotform (API key lives in environment variables, not in client code)
+	- Built-in caching + revalidation to reduce external API calls
+	- File-system routing for pages like `/people/[name]` and `/messages/[chat]`
+	- Clean split between Server Components (data boundary) and Client Components (search, map, interactive panels)
+- **React**: component model for UI + hooks for client interactions.
+- **TypeScript**: type safety for the normalized event model and UI state.
+
+#### External libraries
+- **Fuse.js**: fuzzy search for the global header search (categorized results across People / Messages / Sightings / Checkings).
+- **Leaflet + React-Leaflet**: interactive map rendering for records with usable coordinates.
+- **Tailwind CSS (via PostCSS)**: utility-first styling with dark mode support.
+- **ESLint + eslint-config-next**: code quality and Next.js best practices.
+
+### What it does
+It pulls submissions from multiple Jotform forms (Checkins, Messages, Sightings, Personal Notes, Anonymous Tips), normalizes them into a single investigation timeline, and provides a UI to explore the data.
+
+### Data pipeline
+- Fetches from the Jotform REST API (`/form/{id}/submissions`) per source.
+- Maps every submission into a single normalized event model:
+	- `timestampMs` + `timestampText`
+	- `people[]` (deduped / normalized names)
+	- `location` + optional `coordinates`
+	- `content` (free text) + optional `reliability` (e.g. urgency/confidence)
+- Merges all sources into one array and sorts newest-first to form the “global timeline”.
+- Uses Next.js caching with revalidation (default ~5 minutes) so data stays reasonably fresh without repeatedly hitting the external API.
+
+### UI features
+- **Investigation dashboard**: record list + record detail panel; “linked records” are computed by shared people across events.
+- **Map view**: shows records with usable coordinates using Leaflet.
+- **People**: browse all mentioned people and open a person page with their timeline + map.
+- **Messages**: groups message submissions into chat threads and opens a thread view.
+- **Global header search** (Fuse.js): categorized results across **People**, **Messages**, **Sightings**, and **Checkings**; People + Messages results deep-link to their pages.
+
+> Note: If `JOTFORM_API_KEY` is not set, the app will not load any records.
 
 ## Getting Started
 
@@ -24,7 +57,19 @@ npm install
 
 ### 2) Configure environment
 
-Create `.env.local` in the project root:
+Create `.env` in the project root.
+
+You can start from the provided example file:
+
+```bash
+cp .env.example .env
+```
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Then set your API key:
 
 ```bash
 JOTFORM_API_KEY=your_api_key_here
@@ -44,29 +89,20 @@ Form IDs:
 
 If `JOTFORM_API_KEY` is not set, the app will not load any records.
 
-### 3) Running the application 
+### 3) Run the app
 
-# First create a .env file with api key
-Check .env.example for that 
-
-## For running developement build of next.js itself run in order 
+#### Development
 
 ```bash
-npm install 
-
 npm run dev
 ```
 
-Default port is 3000, so open http://localhost:3000 or just press it from terminal itself.
+Then open http://localhost:3000.
 
-## For building and starting production ready app 
-
+#### Production
 
 ```bash
-npm install 
-
-npm run build 
-
+npm run build
 npm run start
 ```
 
