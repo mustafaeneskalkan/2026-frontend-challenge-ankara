@@ -1,28 +1,17 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type {
-  InvestigationEventClient,
-  InvestigationSource,
-} from "@/lib/investigation";
 import { normalizePersonName } from "@/lib/investigation";
+import { useInvestigation } from "@/components/Investigation/InvestigationContext";
 
 import { DetailSection } from "@/components/Investigation/DetailSection";
 import { RecordsSection } from "@/components/Investigation/RecordsSection";
 import { SearchAside } from "@/components/Investigation/SearchAside";
 import type { SearchScope } from "@/components/Investigation/types";
-import {
-  buildPeopleIndex,
-  normalizeText,
-  sourceLabel,
-} from "@/components/Investigation/utils";
+import { normalizeText, sourceLabel } from "@/components/Investigation/utils";
 
-export default function InvestigationDashboard(props: {
-  events: InvestigationEventClient[];
-  errors: Array<{ source: InvestigationSource; message: string }>;
-  from: Record<InvestigationSource, "api" | "none">;
-}) {
-  const { events, errors, from } = props;
+export default function InvestigationDashboard() {
+  const { events, eventsByKey, people, byPerson, errors, from } = useInvestigation();
 
   const [search, setSearch] = useState("");
   const [scope, setScope] = useState<SearchScope>("any");
@@ -31,12 +20,10 @@ export default function InvestigationDashboard(props: {
     events[0]?.key ?? null,
   );
 
-  const { people, byPerson } = useMemo(() => buildPeopleIndex(events), [events]);
-
   const selectedEvent = useMemo(() => {
     if (!selectedEventKey) return null;
-    return events.find((e) => e.key === selectedEventKey) ?? null;
-  }, [events, selectedEventKey]);
+    return eventsByKey.get(selectedEventKey) ?? null;
+  }, [eventsByKey, selectedEventKey]);
 
   const filteredEvents = useMemo(() => {
     const needle = normalizeText(search);

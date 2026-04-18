@@ -1,7 +1,4 @@
-import type {
-  InvestigationEventClient,
-  InvestigationSource,
-} from "@/lib/investigation";
+import type { InvestigationSource } from "@/lib/investigation";
 import { SOURCE_LABELS, normalizePersonName } from "@/lib/investigation";
 
 export function normalizeText(input: string): string {
@@ -19,13 +16,16 @@ export function formatCoordinates(
   return `${coords.lat.toFixed(5)}, ${coords.lng.toFixed(5)}`;
 }
 
-export function pickEventTitle(evt: InvestigationEventClient): string {
+export function pickEventTitle(evt: {
+  people: string[];
+  location: string | null;
+}): string {
   const people = evt.people.length ? evt.people.join(", ") : "Unknown";
   const where = evt.location ? ` • ${evt.location}` : "";
   return `${people}${where}`;
 }
 
-export function buildPeopleIndex(events: InvestigationEventClient[]) {
+export function buildPeopleIndex<T extends { people: string[] }>(events: T[]) {
   const counts = new Map<string, { label: string; count: number }>();
   const byPerson = new Map<string, number[]>();
 

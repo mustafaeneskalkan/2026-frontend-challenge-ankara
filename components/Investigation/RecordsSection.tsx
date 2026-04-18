@@ -1,11 +1,11 @@
-import type { InvestigationEventClient } from "@/lib/investigation";
+import type { InvestigationEventView } from "@/components/Investigation/InvestigationContext";
 
 import { Badge } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { pickEventTitle, sourceLabel } from "@/components/Investigation/utils";
 
 export function RecordsSection(props: {
-  events: InvestigationEventClient[];
+  events: InvestigationEventView[];
   selectedEventKey: string | null;
   onSelectEvent: (key: string) => void;
 }) {

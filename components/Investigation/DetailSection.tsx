@@ -1,4 +1,4 @@
-import type { InvestigationEventClient } from "@/lib/investigation";
+import type { InvestigationEventView } from "@/components/Investigation/InvestigationContext";
 
 import { Badge } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
@@ -9,8 +9,8 @@ import {
 } from "@/components/Investigation/utils";
 
 export function DetailSection(props: {
-  selectedEvent: InvestigationEventClient | null;
-  linkedEvents: InvestigationEventClient[];
+  selectedEvent: InvestigationEventView | null;
+  linkedEvents: InvestigationEventView[];
   onSelectEvent: (key: string) => void;
 }) {
   const { selectedEvent, linkedEvents, onSelectEvent } = props;
