@@ -42,10 +42,6 @@ export default function Navbar() {
 					})}
 				</ul>
 			</nav>
-
-			<div className="border-t border-zinc-200 px-4 py-3 text-xs text-zinc-600 dark:border-zinc-900 dark:text-zinc-400">
-				Powered by Jotform submissions
-			</div>
 		</aside>
 	);
 }

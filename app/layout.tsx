@@ -43,7 +43,7 @@ export default function RootLayout({
                     Missing Podo: The Ankara Case
                   </h1>
                   <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                    Investigation dashboard (Jotform submissions)
+                    Investigation dashboard
                   </p>
                 </div>
               }
