@@ -1,0 +1,557 @@
+{
+    "responseCode": 200,
+    "message": "success",
+    "content": [
+        {
+            "id": "6522581421001876720",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:22",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Aslı"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:22"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Tunalı Hilmi Caddesi"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90584,32.86089"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Podo ile kısa yürüdük. Gayet rahattı. Sonra başka insanlarla buluşmak istedi."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581411003710254",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:21",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Fatih"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:34"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Kuğulu Park"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90194,32.86028"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Herkes çantayı yanlış anladı. İçindeki sadece sürpriz konfeti düzeneği."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo, Aslı"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581401001328469",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:20",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Hami"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:39"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Seğmenler Parkı"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.89333,32.86353"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Podo iyi görünüyordu ama Kağan’ın ona sonradan bir şey göstereceğini söyledi."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo, Kağan"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581391002319986",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:19",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Gülşah"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:55"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Podo’yu Kağan’la birlikte gördüm. Kağan sürekli 'son durak', 'asıl sürpriz', 'kimse bilmesin' gibi şeyler söylüyordu."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo, Kağan"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581381003185427",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:18",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Can"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:00"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Tunalı Hilmi Caddesi"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90584,32.86089"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Podo mesaj attı. Kağan’la bir yere geçeceğini söyledi. Çok net bir lokasyon yazmadı."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo, Kağan"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581371008836600",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:17",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Eray"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:06"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Kağan bana biri sorarsa Hamamönü de dememi söyledi. Bu başlı başına garip."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Kağan"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581361006579807",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:16",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Cem"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:52"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "CerModern"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93159,32.84967"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Ben hâlâ teknik taraftayım. Eğer birazdan biri kaybolursa yine bana bakacaklar diye korkuyorum."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581351008674064",
+            "form_id": "261065509008958",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:02:15",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "authorName",
+                    "order": "2",
+                    "text": "Author Name",
+                    "type": "control_textbox",
+                    "answer": "Kağan"
+                },
+                "3": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:58"
+                },
+                "4": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "5": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "6": {
+                    "name": "note",
+                    "order": "6",
+                    "text": "Note",
+                    "type": "control_textbox",
+                    "answer": "Birazdan her şey planladığım gibi olursa gecenin en büyük olayı bu olacak."
+                },
+                "7": {
+                    "name": "mentionedPeople",
+                    "order": "7",
+                    "text": "Mentioned People",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Personal Notes",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        }
+    ],
+    "duration": "137.02ms",
+    "info": null,
+    "resultSet": {
+        "offset": 0,
+        "limit": 1000,
+        "count": 8
+    },
+    "limit-left": 884
+}

@@ -1,0 +1,389 @@
+{
+    "responseCode": 200,
+    "message": "success",
+    "content": [
+        {
+            "id": "6522582021008907468",
+            "form_id": "261065875889981",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:03:22",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "1": {
+                    "name": "submissionDate",
+                    "order": "2",
+                    "text": "Submission Date",
+                    "type": "control_textbox",
+                    "answer": "Apr 6, 2026"
+                },
+                "2": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:41"
+                },
+                "3": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Seğmenler Parkı"
+                },
+                "4": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.89333,32.86353"
+                },
+                "5": {
+                    "name": "suspectName",
+                    "order": "6",
+                    "text": "Suspect Name",
+                    "type": "control_textbox",
+                    "answer": "Fatih"
+                },
+                "6": {
+                    "name": "tip",
+                    "order": "7",
+                    "text": "Tip",
+                    "type": "control_textbox",
+                    "answer": "Yanındaki çanta çok şüpheliydi ama galiba mesele Podo değil başka bir sürpriz."
+                },
+                "7": {
+                    "name": "confidence",
+                    "order": "8",
+                    "text": "Confidence",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Anonymous Tips",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522582011006572251",
+            "form_id": "261065875889981",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:03:21",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "1": {
+                    "name": "submissionDate",
+                    "order": "2",
+                    "text": "Submission Date",
+                    "type": "control_textbox",
+                    "answer": "Apr 6, 2026"
+                },
+                "2": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:56"
+                },
+                "3": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "4": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "5": {
+                    "name": "suspectName",
+                    "order": "6",
+                    "text": "Suspect Name",
+                    "type": "control_textbox",
+                    "answer": "Kağan"
+                },
+                "6": {
+                    "name": "tip",
+                    "order": "7",
+                    "text": "Tip",
+                    "type": "control_textbox",
+                    "answer": "Podo ile en son uzun süre yalnız kalan kişi oydu."
+                },
+                "7": {
+                    "name": "confidence",
+                    "order": "8",
+                    "text": "Confidence",
+                    "type": "control_textbox",
+                    "answer": "high"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Anonymous Tips",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522582001006336798",
+            "form_id": "261065875889981",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:03:20",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "1": {
+                    "name": "submissionDate",
+                    "order": "2",
+                    "text": "Submission Date",
+                    "type": "control_textbox",
+                    "answer": "Apr 6, 2026"
+                },
+                "2": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:08"
+                },
+                "3": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Ankara Kalesi"
+                },
+                "4": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.94142,32.86549"
+                },
+                "5": {
+                    "name": "suspectName",
+                    "order": "6",
+                    "text": "Suspect Name",
+                    "type": "control_textbox",
+                    "answer": "Kagan"
+                },
+                "6": {
+                    "name": "tip",
+                    "order": "7",
+                    "text": "Tip",
+                    "type": "control_textbox",
+                    "answer": "Kaleye çıkan tarafta Podo ile birlikteydi. Podo biraz tedirgin gibiydi."
+                },
+                "7": {
+                    "name": "confidence",
+                    "order": "8",
+                    "text": "Confidence",
+                    "type": "control_textbox",
+                    "answer": "high"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Anonymous Tips",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581991006954421",
+            "form_id": "261065875889981",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:03:19",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "1": {
+                    "name": "submissionDate",
+                    "order": "2",
+                    "text": "Submission Date",
+                    "type": "control_textbox",
+                    "answer": "Apr 6, 2026"
+                },
+                "2": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:18"
+                },
+                "3": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Hamamönü"
+                },
+                "4": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93335,32.86514"
+                },
+                "5": {
+                    "name": "suspectName",
+                    "order": "6",
+                    "text": "Suspect Name",
+                    "type": "control_textbox",
+                    "answer": "Kağan A."
+                },
+                "6": {
+                    "name": "tip",
+                    "order": "7",
+                    "text": "Tip",
+                    "type": "control_textbox",
+                    "answer": "Tek başına yürüyordu ve telefonunda birine 'hallettim' dediğini duydum."
+                },
+                "7": {
+                    "name": "confidence",
+                    "order": "8",
+                    "text": "Confidence",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Anonymous Tips",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581981005906110",
+            "form_id": "261065875889981",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:03:18",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "1": {
+                    "name": "submissionDate",
+                    "order": "2",
+                    "text": "Submission Date",
+                    "type": "control_textbox",
+                    "answer": "Apr 6, 2026"
+                },
+                "2": {
+                    "name": "timestamp",
+                    "order": "3",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:09"
+                },
+                "3": {
+                    "name": "location",
+                    "order": "4",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "CerModern"
+                },
+                "4": {
+                    "name": "coordinates",
+                    "order": "5",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93159,32.84967"
+                },
+                "5": {
+                    "name": "suspectName",
+                    "order": "6",
+                    "text": "Suspect Name",
+                    "type": "control_textbox",
+                    "answer": "Cem"
+                },
+                "6": {
+                    "name": "tip",
+                    "order": "7",
+                    "text": "Tip",
+                    "type": "control_textbox",
+                    "answer": "Sürekli ekipmanlarla uğraşıyordu ama şehirde gezmiyordu gibi geldi."
+                },
+                "7": {
+                    "name": "confidence",
+                    "order": "8",
+                    "text": "Confidence",
+                    "type": "control_textbox",
+                    "answer": "low"
+                },
+                "8": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Anonymous Tips",
+                    "type": "control_head"
+                },
+                "9": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        }
+    ],
+    "duration": "136.40ms",
+    "info": null,
+    "resultSet": {
+        "offset": 0,
+        "limit": 1000,
+        "count": 5
+    },
+    "limit-left": 863
+}

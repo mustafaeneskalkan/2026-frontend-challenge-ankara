@@ -1,0 +1,1064 @@
+{
+    "responseCode": 200,
+    "message": "success",
+    "content": [
+        {
+            "id": "6522581031006554432",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:43",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Aslı"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:02"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "CerModern"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93159,32.84967"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Buradaki kalabalık iyiymiş. Sonra Tunalı tarafına geçen olur mu?"
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "low"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581021007919218",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:42",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Aslı"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:04"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "CerModern"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93159,32.84967"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Olur bence. Ben birazdan çıkabilirim."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "low"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581011009663948",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:41",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Cem"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:18"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Tunalı Hilmi Caddesi"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90584,32.86089"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Sen yine bir şeyler kuruyorsun galiba 😄 Neredesin?"
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "low"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522581001002286660",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:40",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Cem"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:19"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "CerModern"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.93159,32.84967"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Ben hâlâ teknik tarafa bakıyorum, Tunalı’da değilim."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580991001018081",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:39",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Fatih"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:31"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Kuğulu Park"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90194,32.86028"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "O çantada ne var ya, herkes seni aşırı gizemli buluyor."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "low"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580981003511123",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:38",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Fatih"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:32"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Kuğulu Park"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90194,32.86028"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Sürpriz bir şey, yanlış anlaşılacak diye göstermiyorum 😅"
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580971002024595",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:37",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Kağan"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:44"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Seğmenler Parkı"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.89333,32.86353"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Sana gece sonu için çok iyi bir sürpriz göstereceğim. Kalabalıktan biraz uzaklaşalım mı?"
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "high"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580961001263579",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:36",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Kağan"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:45"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Seğmenler Parkı"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.89333,32.86353"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Yine mi gizemli konuşuyorsun? Tamam ama çok uzaklaşmayalım."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580951007905740",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:35",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Gülşah"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Aslı"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:53"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Podo’yu az önce Kağan’la birlikte aşağı doğru yürürken gördüm."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "high"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580941001279209",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:34",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Aslı"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Gülşah"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:54"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Bu gece en çok o dikkatimi çekiyordu zaten."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580931009012332",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:33",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Can"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:56"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Kağan bana 'son nokta' diye bir yer gösterecekmiş. Biraz tuhaf ama bakacağım."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580921008914033",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:32",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Can"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Podo"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 20:57"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Tunalı Hilmi Caddesi"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.90584,32.86089"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Yalnız çok geç kalma. Haber ver."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580911002900185",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:31",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Kagan"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Eray"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:02"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Beni soran olursa Hamamönü tarafına geçtim dersin."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "high"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        },
+        {
+            "id": "6522580901005772584",
+            "form_id": "261065765723966",
+            "ip": "127.0.0.1",
+            "created_at": "2026-04-17 14:01:30",
+            "status": "CUSTOM",
+            "new": "0",
+            "flag": "0",
+            "notes": "",
+            "updated_at": null,
+            "answers": {
+                "2": {
+                    "name": "senderName",
+                    "order": "2",
+                    "text": "Sender Name",
+                    "type": "control_textbox",
+                    "answer": "Eray"
+                },
+                "3": {
+                    "name": "recipientName",
+                    "order": "3",
+                    "text": "Recipient Name",
+                    "type": "control_textbox",
+                    "answer": "Kagan"
+                },
+                "4": {
+                    "name": "timestamp",
+                    "order": "4",
+                    "text": "Timestamp",
+                    "type": "control_textbox",
+                    "answer": "18-04-2026 21:03"
+                },
+                "5": {
+                    "name": "location",
+                    "order": "5",
+                    "text": "Location",
+                    "type": "control_textbox",
+                    "answer": "Atakule"
+                },
+                "6": {
+                    "name": "coordinates",
+                    "order": "6",
+                    "text": "Coordinates",
+                    "type": "control_textbox",
+                    "answer": "39.88645,32.85558"
+                },
+                "7": {
+                    "name": "text",
+                    "order": "7",
+                    "text": "Text",
+                    "type": "control_textbox",
+                    "answer": "Niye böyle diyeyim ya, daha da şüpheli duruyor bu."
+                },
+                "8": {
+                    "name": "urgency",
+                    "order": "8",
+                    "text": "Urgency",
+                    "type": "control_textbox",
+                    "answer": "medium"
+                },
+                "9": {
+                    "name": "heading",
+                    "order": "1",
+                    "text": "Messages",
+                    "type": "control_head"
+                },
+                "10": {
+                    "hackRecipients": "No",
+                    "name": "submit2",
+                    "order": "9999",
+                    "text": "Submit",
+                    "type": "control_button"
+                }
+            }
+        }
+    ],
+    "duration": "150.17ms",
+    "info": null,
+    "resultSet": {
+        "offset": 0,
+        "limit": 1000,
+        "count": 14
+    },
+    "limit-left": 896
+}
