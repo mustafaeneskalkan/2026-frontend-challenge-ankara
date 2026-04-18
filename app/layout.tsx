@@ -5,6 +5,7 @@ import GeneralSearch from "@/components/GeneralSearch";
 import Navbar from "@/components/Navbar";
 import InvestigationBootstrap from "@/components/Investigation/InvestigationBootstrap";
 import { InvestigationHeaderStatistics } from "@/components/Investigation/HeaderStatistics";
+import "leaflet/dist/leaflet.css";
 import "./globals.css";
 
 const geistSans = Geist({

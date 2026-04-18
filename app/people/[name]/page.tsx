@@ -7,6 +7,7 @@ import { Badge } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { useInvestigation } from "@/components/Investigation/InvestigationContext";
 import { sourceLabel } from "@/components/Investigation/utils";
+import LeafletMap from "@/components/LeafletMap";
 import { PersonCard } from "@/components/PersonCard";
 import { normalizePersonName } from "@/lib/investigation";
 
@@ -30,6 +31,15 @@ export default function PersonPage() {
 
 	const indices = byPerson.get(personKey) ?? [];
 	const personEvents = indices.map((i) => events[i]!).filter(Boolean);
+	const sightingsWithCoordinates = personEvents.filter(
+		(evt) => evt.source === "sightings" && evt.coordinates,
+	);
+	const sightingMarkers = sightingsWithCoordinates.map((evt) => ({
+		key: evt.key,
+		position: evt.coordinates!,
+		title: evt.location ?? "Sighting",
+		subtitle: evt.timestampText,
+	}));
 	const latest = personEvents[0] ?? null;
 	const sources = Array.from(
 		new Set(personEvents.map((evt) => sourceLabel(evt.source))),
@@ -59,6 +69,24 @@ export default function PersonPage() {
 					latestLocation={latest?.location ?? null}
 					sources={sources}
 				/>
+
+				{sightingMarkers.length ? (
+					<section className="mt-4 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-900 dark:bg-black">
+						<div className="flex items-center justify-between gap-3">
+							<SectionTitle>Sightings Map</SectionTitle>
+							<span className="text-xs text-zinc-600 dark:text-zinc-400">
+								{sightingMarkers.length} pin{sightingMarkers.length === 1 ? "" : "s"}
+							</span>
+						</div>
+
+						<div className="mt-4 overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-900">
+							<LeafletMap
+								markers={sightingMarkers}
+								className="h-80 w-full"
+							/>
+						</div>
+					</section>
+				) : null}
 
 				<section className="mt-4 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-900 dark:bg-black">
 					<div className="flex items-center justify-between">
