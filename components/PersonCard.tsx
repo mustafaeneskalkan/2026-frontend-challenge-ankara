@@ -89,7 +89,7 @@ export function PersonCard(props: {
               </dt>
               <dd className="mt-1">
                 {latestLocation ? (
-                  <Badge>{latestLocation}</Badge>
+                  <Badge color="blue">{latestLocation}</Badge>
                 ) : (
                   <span className="text-sm text-zinc-700 dark:text-zinc-300">—</span>
                 )}

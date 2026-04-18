@@ -2,6 +2,7 @@
 
 import type { ReactNode } from "react";
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function Header(props: {
 	title: ReactNode;
@@ -17,7 +18,10 @@ export default function Header(props: {
 					{title}
 				</Link>
 				<div className="min-w-0 flex-1">{search}</div>
-				<div className="shrink-0">{statistics}</div>
+				<div className="flex shrink-0 items-center gap-3">
+					<ThemeToggle />
+					{statistics}
+				</div>
 			</div>
 		</header>
 	);

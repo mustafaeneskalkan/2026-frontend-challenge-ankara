@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import type { InvestigationSource } from "@/lib/investigation";
 
 export type BadgeColor =
   | "zinc"
@@ -9,16 +10,33 @@ export type BadgeColor =
   | "violet";
 
 const COLOR_CLASS: Record<BadgeColor, string> = {
-  zinc: "border-zinc-200 bg-zinc-50 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-200",
-  blue: "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/60 dark:bg-blue-950/40 dark:text-blue-200",
+  zinc: "border-zinc-200 bg-zinc-50 text-zinc-700 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-50",
+  blue: "border-blue-200 bg-blue-100 text-blue-800 dark:border-blue-700/40 dark:bg-blue-600/18 dark:text-blue-200",
   green:
-    "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-200",
+    "border-emerald-200 bg-emerald-100 text-emerald-800 dark:border-emerald-700/40 dark:bg-emerald-600/18 dark:text-emerald-200",
   amber:
-    "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-200",
-  red: "border-red-200 bg-red-50 text-red-700 dark:border-red-900/60 dark:bg-red-950/40 dark:text-red-200",
+    "border-amber-200 bg-amber-100 text-amber-900 dark:border-amber-700/40 dark:bg-amber-600/20 dark:text-amber-200",
+  red: "border-red-200 bg-red-100 text-red-800 dark:border-red-700/40 dark:bg-red-600/18 dark:text-red-200",
   violet:
-    "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900/60 dark:bg-violet-950/40 dark:text-violet-200",
+    "border-violet-200 bg-violet-100 text-violet-800 dark:border-violet-700/40 dark:bg-violet-600/18 dark:text-violet-200",
 };
+
+export function sourceBadgeColor(source: InvestigationSource): BadgeColor {
+  switch (source) {
+    case "sightings":
+      return "blue";
+    case "checkins":
+      return "green";
+    case "messages":
+      return "violet";
+    case "personal-notes":
+      return "amber";
+    case "anonymous-tips":
+      return "red";
+    default:
+      return "zinc";
+  }
+}
 
 export function Badge({
   children,

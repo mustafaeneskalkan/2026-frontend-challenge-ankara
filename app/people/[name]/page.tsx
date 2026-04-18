@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-import { Badge } from "@/components/Investigation/Badge";
-import type { BadgeColor } from "@/components/Investigation/Badge";
+import { Badge, sourceBadgeColor } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { useInvestigation } from "@/components/Investigation/InvestigationContext";
 import { sourceLabel } from "@/components/Investigation/utils";
@@ -53,30 +52,21 @@ export default function PersonPage() {
 			} => hasUsableCoordinates(evt.coordinates),
 		)
 		.map((evt) => {
-			const colorBySource: Record<string, BadgeColor> = {
-				sightings: "blue",
-				checkins: "green",
-				messages: "violet",
-				"personal-notes": "amber",
-				"anonymous-tips": "red",
-			};
-
 			const source = sourceLabel(evt.source);
 			const title = evt.location ?? source;
 			const subtitle = `${source} • ${evt.timestampText}`;
+			const color = sourceBadgeColor(evt.source);
 
 			return {
 				key: evt.key,
 				position: evt.coordinates,
 				title,
 				subtitle,
-				color: colorBySource[evt.source] ?? "zinc",
+				color,
 				popup: (
 					<div className="min-w-[220px] max-w-[280px] space-y-2">
 						<div className="flex flex-wrap items-center gap-2">
-							<Badge color={colorBySource[evt.source] ?? "zinc"}>
-								{source}
-							</Badge>
+							<Badge color={color}>{source}</Badge>
 							{evt.reliability ? (
 								<Badge color="amber">{evt.reliability}</Badge>
 							) : null}
@@ -200,11 +190,15 @@ export default function PersonPage() {
 													{evt.timestampText}
 												</time>
 												<div className="flex flex-wrap items-center gap-2">
-													<Badge color="blue">{sourceLabel(evt.source)}</Badge>
+													<Badge color={sourceBadgeColor(evt.source)}>
+														{sourceLabel(evt.source)}
+													</Badge>
 													{evt.reliability ? (
 														<Badge color="amber">{evt.reliability}</Badge>
 													) : null}
-													{evt.location ? <Badge>{evt.location}</Badge> : null}
+													{evt.location ? (
+														<Badge color="blue">{evt.location}</Badge>
+													) : null}
 												</div>
 											</div>
 

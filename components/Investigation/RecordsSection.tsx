@@ -1,6 +1,6 @@
 import type { InvestigationEventView } from "@/components/Investigation/InvestigationContext";
 
-import { Badge } from "@/components/Investigation/Badge";
+import { Badge, sourceBadgeColor } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { pickEventTitle, sourceLabel } from "@/components/Investigation/utils";
 
@@ -47,8 +47,10 @@ export function RecordsSection(props: {
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Badge>{sourceLabel(evt.source)}</Badge>
-                        {evt.reliability ? <Badge>{evt.reliability}</Badge> : null}
+                        <Badge color={sourceBadgeColor(evt.source)}>{sourceLabel(evt.source)}</Badge>
+                        {evt.reliability ? (
+                          <Badge color="amber">{evt.reliability}</Badge>
+                        ) : null}
                       </div>
                     </button>
                   </li>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/Header";
 import GeneralSearch from "@/components/GeneralSearch";
 import Navbar from "@/components/Navbar";
@@ -32,8 +33,23 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full bg-white text-zinc-900 dark:bg-black dark:text-zinc-50">
+        <Script id="theme-init" strategy="beforeInteractive">
+          {`(() => {
+  try {
+    const key = "ankara-theme";
+    const stored = localStorage.getItem(key);
+    const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const theme = stored === "light" || stored === "dark" ? stored : (prefersDark ? "dark" : "light");
+    const root = document.documentElement;
+    root.classList.toggle("dark", theme === "dark");
+    root.classList.toggle("light", theme === "light");
+    root.style.colorScheme = theme;
+  } catch {}
+})();`}
+        </Script>
         <InvestigationBootstrap>
           <div className="flex min-h-screen flex-col">
             <Header

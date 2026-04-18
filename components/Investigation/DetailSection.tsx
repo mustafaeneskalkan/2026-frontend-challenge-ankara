@@ -1,6 +1,6 @@
 import type { InvestigationEventView } from "@/components/Investigation/InvestigationContext";
 
-import { Badge } from "@/components/Investigation/Badge";
+import { Badge, sourceBadgeColor } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import {
   formatCoordinates,
@@ -27,9 +27,13 @@ export function DetailSection(props: {
         ) : (
           <div className="mt-3 flex flex-col gap-4">
             <div className="flex flex-wrap items-center gap-2">
-              <Badge>{sourceLabel(selectedEvent.source)}</Badge>
-              <Badge>{selectedEvent.timestampText}</Badge>
-              {selectedEvent.location ? <Badge>{selectedEvent.location}</Badge> : null}
+              <Badge color={sourceBadgeColor(selectedEvent.source)}>
+                {sourceLabel(selectedEvent.source)}
+              </Badge>
+              <Badge color="blue">{selectedEvent.timestampText}</Badge>
+              {selectedEvent.location ? (
+                <Badge color="blue">{selectedEvent.location}</Badge>
+              ) : null}
             </div>
 
             <div className="rounded-md border border-zinc-200 p-3 text-sm dark:border-zinc-900">
@@ -90,8 +94,12 @@ export function DetailSection(props: {
                             </span>
                           </div>
                           <div className="flex items-center gap-2">
-                            <Badge>{sourceLabel(evt.source)}</Badge>
-                            {evt.reliability ? <Badge>{evt.reliability}</Badge> : null}
+                            <Badge color={sourceBadgeColor(evt.source)}>
+                              {sourceLabel(evt.source)}
+                            </Badge>
+                            {evt.reliability ? (
+                              <Badge color="amber">{evt.reliability}</Badge>
+                            ) : null}
                           </div>
                         </button>
                       </li>

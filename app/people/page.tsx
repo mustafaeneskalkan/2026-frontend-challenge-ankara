@@ -79,9 +79,13 @@ export default function PeoplePage() {
 											</div>
 
 												<div className="flex flex-wrap items-center gap-2">
-													<Badge>{person.count} records</Badge>
-													{latest?.reliability ? <Badge> Reliability: {latest.reliability}</Badge> : null}
-													{latest?.location ? <Badge>Last seen at: {latest.location}</Badge> : null}
+													<Badge color="green">{person.count} records</Badge>
+													{latest?.reliability ? (
+														<Badge color="amber">Reliability: {latest.reliability}</Badge>
+													) : null}
+													{latest?.location ? (
+														<Badge color="blue">Last seen at: {latest.location}</Badge>
+													) : null}
 												</div>
 											</Link>
 										</li>

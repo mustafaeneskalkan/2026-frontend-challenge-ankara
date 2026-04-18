@@ -1,8 +1,26 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand palette (requested). */
+  --brand-blue: #0099ff;
+  --brand-orange: #ff6100;
+  --brand-gold: #ffb629;
+  --brand-navy: #0a1551;
+  --brand-white: #ffffff;
+  --brand-black: #000000;
+
+  /* "White tone" — derived only from the brand palette. */
+  --brand-white-tone: color-mix(in srgb, var(--brand-navy) 3%, var(--brand-white));
+
+  /* Derived accents to support existing semantic color families. */
+  --brand-amber: color-mix(in srgb, var(--brand-gold) 70%, var(--brand-orange));
+  --brand-violet: color-mix(in srgb, var(--brand-navy) 75%, var(--brand-blue));
+
+  /* App surface tokens used by base CSS + Leaflet popups. */
+  --background: var(--brand-white);
+  --foreground: var(--brand-navy);
 }
 
 @theme inline {
@@ -10,13 +28,122 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Expose brand colors as Tailwind tokens. */
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-orange: var(--brand-orange);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-navy: var(--brand-navy);
+  --color-white: var(--brand-white);
+  --color-white-tone: var(--brand-white-tone);
+  --color-black: var(--brand-black);
+
+  /*
+    Theme remapping:
+    Override Tailwind's default color families so existing utilities across the app
+    (zinc/blue/emerald/amber/red/violet) render using this palette.
+  */
+
+  /* Neutrals (used heavily throughout the UI). */
+  --color-zinc-50: var(--brand-white-tone);
+  --color-zinc-100: color-mix(in srgb, var(--brand-navy) 4%, var(--brand-white));
+  --color-zinc-200: color-mix(in srgb, var(--brand-navy) 9%, var(--brand-white));
+  --color-zinc-300: color-mix(in srgb, var(--brand-navy) 16%, var(--brand-white));
+  --color-zinc-400: color-mix(in srgb, var(--brand-navy) 25%, var(--brand-white));
+  --color-zinc-500: color-mix(in srgb, var(--brand-navy) 40%, var(--brand-white));
+  --color-zinc-600: color-mix(in srgb, var(--brand-navy) 55%, var(--brand-white));
+  --color-zinc-700: color-mix(in srgb, var(--brand-navy) 70%, var(--brand-white));
+  --color-zinc-800: color-mix(in srgb, var(--brand-navy) 85%, var(--brand-white));
+  --color-zinc-900: var(--brand-navy);
+  --color-zinc-950: var(--brand-black);
+
+  /* Brand blue. */
+  --color-blue-50: color-mix(in srgb, var(--brand-blue) 8%, var(--brand-white));
+  --color-blue-100: color-mix(in srgb, var(--brand-blue) 14%, var(--brand-white));
+  --color-blue-200: color-mix(in srgb, var(--brand-blue) 25%, var(--brand-white));
+  --color-blue-300: color-mix(in srgb, var(--brand-blue) 38%, var(--brand-white));
+  --color-blue-400: color-mix(in srgb, var(--brand-blue) 55%, var(--brand-white));
+  --color-blue-500: color-mix(in srgb, var(--brand-blue) 80%, var(--brand-white));
+  --color-blue-600: var(--brand-blue);
+  --color-blue-700: color-mix(in srgb, var(--brand-blue) 75%, var(--brand-navy));
+  --color-blue-800: color-mix(in srgb, var(--brand-blue) 60%, var(--brand-navy));
+  --color-blue-900: color-mix(in srgb, var(--brand-blue) 45%, var(--brand-navy));
+  --color-blue-950: color-mix(in srgb, var(--brand-blue) 25%, var(--brand-black));
+
+  /* "Green" in the UI maps to the brand gold. */
+  --color-emerald-50: color-mix(in srgb, var(--brand-gold) 12%, var(--brand-white));
+  --color-emerald-100: color-mix(in srgb, var(--brand-gold) 18%, var(--brand-white));
+  --color-emerald-200: color-mix(in srgb, var(--brand-gold) 30%, var(--brand-white));
+  --color-emerald-300: color-mix(in srgb, var(--brand-gold) 45%, var(--brand-white));
+  --color-emerald-400: color-mix(in srgb, var(--brand-gold) 60%, var(--brand-white));
+  --color-emerald-500: color-mix(in srgb, var(--brand-gold) 80%, var(--brand-white));
+  --color-emerald-600: var(--brand-gold);
+  --color-emerald-700: color-mix(in srgb, var(--brand-gold) 70%, var(--brand-black));
+  --color-emerald-800: color-mix(in srgb, var(--brand-gold) 55%, var(--brand-black));
+  --color-emerald-900: color-mix(in srgb, var(--brand-gold) 40%, var(--brand-black));
+  --color-emerald-950: color-mix(in srgb, var(--brand-gold) 25%, var(--brand-black));
+
+  /* Reliability/"amber" — gold warmed with orange. */
+  --color-amber-50: color-mix(in srgb, var(--brand-amber) 10%, var(--brand-white));
+  --color-amber-100: color-mix(in srgb, var(--brand-amber) 16%, var(--brand-white));
+  --color-amber-200: color-mix(in srgb, var(--brand-amber) 28%, var(--brand-white));
+  --color-amber-300: color-mix(in srgb, var(--brand-amber) 42%, var(--brand-white));
+  --color-amber-400: color-mix(in srgb, var(--brand-amber) 58%, var(--brand-white));
+  --color-amber-500: color-mix(in srgb, var(--brand-amber) 80%, var(--brand-white));
+  --color-amber-600: var(--brand-amber);
+  --color-amber-700: color-mix(in srgb, var(--brand-amber) 70%, var(--brand-black));
+  --color-amber-800: color-mix(in srgb, var(--brand-amber) 55%, var(--brand-black));
+  --color-amber-900: color-mix(in srgb, var(--brand-amber) 40%, var(--brand-black));
+  --color-amber-950: color-mix(in srgb, var(--brand-amber) 25%, var(--brand-black));
+
+  /* "Red" maps to the brand orange (alerts/tips). */
+  --color-red-50: color-mix(in srgb, var(--brand-orange) 10%, var(--brand-white));
+  --color-red-100: color-mix(in srgb, var(--brand-orange) 16%, var(--brand-white));
+  --color-red-200: color-mix(in srgb, var(--brand-orange) 28%, var(--brand-white));
+  --color-red-300: color-mix(in srgb, var(--brand-orange) 42%, var(--brand-white));
+  --color-red-400: color-mix(in srgb, var(--brand-orange) 58%, var(--brand-white));
+  --color-red-500: color-mix(in srgb, var(--brand-orange) 80%, var(--brand-white));
+  --color-red-600: var(--brand-orange);
+  --color-red-700: color-mix(in srgb, var(--brand-orange) 70%, var(--brand-black));
+  --color-red-800: color-mix(in srgb, var(--brand-orange) 55%, var(--brand-black));
+  --color-red-900: color-mix(in srgb, var(--brand-orange) 40%, var(--brand-black));
+  --color-red-950: color-mix(in srgb, var(--brand-orange) 25%, var(--brand-black));
+
+  /* "Violet" maps to a navy/blue blend (messages). */
+  --color-violet-50: color-mix(in srgb, var(--brand-violet) 8%, var(--brand-white));
+  --color-violet-100: color-mix(in srgb, var(--brand-violet) 14%, var(--brand-white));
+  --color-violet-200: color-mix(in srgb, var(--brand-violet) 25%, var(--brand-white));
+  --color-violet-300: color-mix(in srgb, var(--brand-violet) 38%, var(--brand-white));
+  --color-violet-400: color-mix(in srgb, var(--brand-violet) 55%, var(--brand-white));
+  --color-violet-500: color-mix(in srgb, var(--brand-violet) 80%, var(--brand-white));
+  --color-violet-600: var(--brand-violet);
+  --color-violet-700: color-mix(in srgb, var(--brand-violet) 72%, var(--brand-black));
+  --color-violet-800: color-mix(in srgb, var(--brand-violet) 56%, var(--brand-black));
+  --color-violet-900: color-mix(in srgb, var(--brand-violet) 42%, var(--brand-black));
+  --color-violet-950: color-mix(in srgb, var(--brand-violet) 28%, var(--brand-black));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --brand-black: color-mix(in srgb, var(--brand-navy) 35%, #000000);
+
+    --background: var(--brand-black);
+    --foreground: var(--brand-white-tone);
   }
+}
+
+:root.light {
+  --brand-black: #000000;
+  --background: var(--brand-white);
+  --foreground: var(--brand-navy);
+  color-scheme: light;
+}
+
+:root.dark {
+  --brand-black: color-mix(in srgb, var(--brand-navy) 22%, #000000);
+  --background: var(--brand-black);
+  --foreground: var(--brand-white-tone);
+  color-scheme: dark;
 }
 
 body {

@@ -52,8 +52,12 @@ export default function SightingsPage() {
 
 										<div className="mt-2 flex flex-wrap items-center gap-2">
 											<Badge color="blue">Sightings</Badge>
-											{evt.reliability ? <Badge>{evt.reliability}</Badge> : null}
-											{evt.location ? <Badge>{evt.location}</Badge> : null}
+											{evt.reliability ? (
+												<Badge color="amber">{evt.reliability}</Badge>
+											) : null}
+											{evt.location ? (
+												<Badge color="blue">{evt.location}</Badge>
+											) : null}
 										</div>
 									</li>
 								))
