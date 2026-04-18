@@ -11,9 +11,9 @@ type NavItem = {
 const NAV_ITEMS: NavItem[] = [
 	{ href: "/", label: "Dashboard" },
 	{ href: "/people", label: "People" },
+	{ href: "/messages", label: "Messages" },
 	{ href: "/checkings", label: "Checkings" },
 	{ href: "/sightings", label: "Sightings" },
-	{ href: "/messages", label: "Messages" },
 ];
 
 export default function Navbar() {
