@@ -45,37 +45,16 @@ export function getAnswer(
   return getAnswerValue(submission, answerName);
 }
 
-async function loadSampleResponse(
-  source: InvestigationSource,
-): Promise<JotformSubmissionsResponse | null> {
-  // These imports stay server-side and are only used as a fallback.
-  switch (source) {
-    case "messages":
-      return (await import("@/SampleData/Messages.json")).default;
-    case "sightings":
-      return (await import("@/SampleData/Sightings.json")).default;
-    case "personal-notes":
-      return (await import("@/SampleData/PersonalNotes.json")).default;
-    case "anonymous-tips":
-      return (await import("@/SampleData/AnonTips.json")).default;
-    case "checkins":
-      // No sample file shipped for Checkins in this repo.
-      return null;
-  }
-}
-
 export async function fetchJotformSubmissions(options: {
   formId: string;
   source: InvestigationSource;
   apiKey?: string;
   revalidateSeconds?: number;
-}): Promise<{ submissions: JotformSubmission[]; from: "api" | "sample" }> {
+}): Promise<{ submissions: JotformSubmission[]; from: "api" }> {
   const { formId, source, apiKey, revalidateSeconds = 300 } = options;
 
   if (!apiKey) {
-    const sample = await loadSampleResponse(source);
-    const submissions = sample?.content ?? [];
-    return { submissions, from: "sample" };
+    throw new Error("Missing JOTFORM_API_KEY");
   }
 
   const url = `https://api.jotform.com/form/${encodeURIComponent(

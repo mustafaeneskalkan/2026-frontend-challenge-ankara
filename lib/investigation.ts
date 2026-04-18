@@ -114,7 +114,6 @@ function toEventBase(
 }
 
 function mapCheckins(formId: string, submission: JotformSubmission): InvestigationEvent {
-  // The Checkins form schema is not included in SampleData.
   // We try to match the Sightings schema first, then fall back to whatever we can infer.
   const personName = getAnswer(submission, "personName");
   const seenWith = getAnswer(submission, "seenWith");
@@ -251,7 +250,7 @@ function mapSubmission(
 
 export type InvestigationData = {
   events: InvestigationEvent[];
-  from: Record<InvestigationSource, "api" | "sample" | "none">;
+  from: Record<InvestigationSource, "api" | "none">;
   errors: Array<{ source: InvestigationSource; message: string }>;
 };
 
@@ -294,7 +293,7 @@ export async function getInvestigationData(options?: {
     }
 
     const { source, formId, submissions, fetchedFrom } = result.value;
-    from[source] = submissions.length ? fetchedFrom : from[source];
+    from[source] = fetchedFrom;
 
     for (const submission of submissions) {
       if (!submission?.id) continue;

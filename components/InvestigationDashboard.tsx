@@ -76,7 +76,7 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export default function InvestigationDashboard(props: {
   events: InvestigationEventClient[];
   errors: Array<{ source: InvestigationSource; message: string }>;
-  from: Record<InvestigationSource, "api" | "sample" | "none">;
+  from: Record<InvestigationSource, "api" | "none">;
 }) {
   const { events, errors, from } = props;
 
@@ -146,14 +146,11 @@ export default function InvestigationDashboard(props: {
   }, [byPerson, events, selectedEvent]);
 
   const apiStatusText = useMemo(() => {
-    const usingSample = Object.entries(from)
-      .filter(([, v]) => v === "sample")
-      .map(([k]) => k);
-    if (!usingSample.length) return null;
-    return `Showing sample data for: ${usingSample
-      .map((s) => sourceLabel(s as InvestigationSource))
-      .join(", ")}. Set JOTFORM_API_KEY to fetch live.`;
-  }, [from]);
+    const hasApiData = Object.values(from).some((v) => v === "api");
+    if (hasApiData) return null;
+    if (events.length) return null;
+    return "No records loaded. Set JOTFORM_API_KEY to fetch Jotform submissions.";
+  }, [events.length, from]);
 
   return (
     <div className="flex flex-1 flex-col bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-50">

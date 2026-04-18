@@ -42,7 +42,7 @@ Form IDs:
 - Personal Notes: `261065509008958`
 - Anonymous Tips: `261065875889981`
 
-If `JOTFORM_API_KEY` is not set, the app falls back to `SampleData/` for everything except Checkins.
+If `JOTFORM_API_KEY` is not set, the app will not load any records.
 
 ### 3) Run
 
