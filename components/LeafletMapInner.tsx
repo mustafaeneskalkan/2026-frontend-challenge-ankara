@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo } from "react";
+import type { ReactNode } from "react";
 import {
   MapContainer,
   Marker,
@@ -10,12 +11,15 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import type { LatLngExpression } from "leaflet";
+import type { BadgeColor } from "@/components/Investigation/Badge";
 
 export type LeafletMarkerPin = {
   key: string;
   position: { lat: number; lng: number };
   title?: string | null;
   subtitle?: string | null;
+  color?: BadgeColor;
+  popup?: ReactNode;
 };
 
 export type LeafletMapProps = {
@@ -36,16 +40,33 @@ function FitToMarkers(props: { positions: LatLngExpression[] }) {
   return null;
 }
 
-const defaultMarkerIcon = L.icon({
-  iconRetinaUrl:
-    "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png",
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-  popupAnchor: [1, -34],
-  shadowSize: [41, 41],
-});
+const PIN_CLASS_BY_COLOR: Record<BadgeColor, string> = {
+  zinc: "bg-zinc-600 border-zinc-800",
+  blue: "bg-blue-600 border-blue-800",
+  green: "bg-emerald-600 border-emerald-800",
+  amber: "bg-amber-500 border-amber-700",
+  red: "bg-red-600 border-red-800",
+  violet: "bg-violet-600 border-violet-800",
+};
+
+const iconCache = new Map<string, L.DivIcon>();
+
+function pinIcon(color: BadgeColor = "zinc"): L.DivIcon {
+  const key = color;
+  const existing = iconCache.get(key);
+  if (existing) return existing;
+
+  const colorClass = PIN_CLASS_BY_COLOR[color] ?? PIN_CLASS_BY_COLOR.zinc;
+  const icon = L.divIcon({
+    className: "leaflet-map-pin",
+    html: `<span class="block h-4 w-4 rounded-full border-2 ${colorClass}"></span>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+    popupAnchor: [0, -8],
+  });
+  iconCache.set(key, icon);
+  return icon;
+}
 
 export default function LeafletMapInner(props: LeafletMapProps) {
   const center: LatLngExpression = props.markers.length
@@ -75,9 +96,11 @@ export default function LeafletMapInner(props: LeafletMapProps) {
         <Marker
           key={m.key}
           position={[m.position.lat, m.position.lng] as [number, number]}
-          icon={defaultMarkerIcon}
+          icon={pinIcon(m.color)}
         >
-          {m.title || m.subtitle ? (
+          {m.popup ? (
+            <Popup>{m.popup}</Popup>
+          ) : m.title || m.subtitle ? (
             <Popup>
               {m.title ? <div className="font-medium">{m.title}</div> : null}
               {m.subtitle ? (

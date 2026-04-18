@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 import { Badge } from "@/components/Investigation/Badge";
+import type { BadgeColor } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { useInvestigation } from "@/components/Investigation/InvestigationContext";
 import { sourceLabel } from "@/components/Investigation/utils";
@@ -19,6 +20,18 @@ function safeDecodeURIComponent(value: string): string {
 	}
 }
 
+function hasUsableCoordinates(
+	coords: { lat: number; lng: number } | null,
+): coords is { lat: number; lng: number } {
+	if (!coords) return false;
+	if (!Number.isFinite(coords.lat) || !Number.isFinite(coords.lng)) return false;
+	if (coords.lat < -90 || coords.lat > 90) return false;
+	if (coords.lng < -180 || coords.lng > 180) return false;
+	// Many form providers send a placeholder when coordinates are missing.
+	if (coords.lat === 0 && coords.lng === 0) return false;
+	return true;
+}
+
 export default function PersonPage() {
 	const params = useParams();
 	const raw = (params as Record<string, string | string[] | undefined>)?.name;
@@ -31,15 +44,92 @@ export default function PersonPage() {
 
 	const indices = byPerson.get(personKey) ?? [];
 	const personEvents = indices.map((i) => events[i]!).filter(Boolean);
-	const sightingsWithCoordinates = personEvents.filter(
-		(evt) => evt.source === "sightings" && evt.coordinates,
-	);
-	const sightingMarkers = sightingsWithCoordinates.map((evt) => ({
-		key: evt.key,
-		position: evt.coordinates!,
-		title: evt.location ?? "Sighting",
-		subtitle: evt.timestampText,
-	}));
+	const markers = personEvents
+		.filter(
+			(
+				evt,
+			): evt is (typeof personEvents)[number] & {
+				coordinates: { lat: number; lng: number };
+			} => hasUsableCoordinates(evt.coordinates),
+		)
+		.map((evt) => {
+			const colorBySource: Record<string, BadgeColor> = {
+				sightings: "blue",
+				checkins: "green",
+				messages: "violet",
+				"personal-notes": "amber",
+				"anonymous-tips": "red",
+			};
+
+			const source = sourceLabel(evt.source);
+			const title = evt.location ?? source;
+			const subtitle = `${source} • ${evt.timestampText}`;
+
+			return {
+				key: evt.key,
+				position: evt.coordinates,
+				title,
+				subtitle,
+				color: colorBySource[evt.source] ?? "zinc",
+				popup: (
+					<div className="min-w-[220px] max-w-[280px] space-y-2">
+						<div className="flex flex-wrap items-center gap-2">
+							<Badge color={colorBySource[evt.source] ?? "zinc"}>
+								{source}
+							</Badge>
+							{evt.reliability ? (
+								<Badge color="amber">{evt.reliability}</Badge>
+							) : null}
+						</div>
+
+						<dl className="grid grid-cols-[80px_1fr] gap-x-2 gap-y-1 text-xs">
+							<dt className="text-zinc-500 dark:text-zinc-400">
+								Time
+							</dt>
+							<dd className="text-zinc-900 dark:text-zinc-50">
+								{evt.timestampText || "—"}
+							</dd>
+
+							<dt className="text-zinc-500 dark:text-zinc-400">
+								Location
+							</dt>
+							<dd className="text-zinc-900 dark:text-zinc-50">
+								{evt.location ?? "—"}
+							</dd>
+
+							<dt className="text-zinc-500 dark:text-zinc-400">
+								People
+							</dt>
+							<dd className="text-zinc-900 dark:text-zinc-50">
+								{evt.people.length ? (
+									evt.people.map((name, idx) => (
+										<span key={`${evt.key}:person:${idx}`}>
+											<Link
+												href={`/people/${encodeURIComponent(name)}`}
+												className="underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
+											>
+												{name}
+											</Link>
+											{idx < evt.people.length - 1 ? ", " : null}
+										</span>
+									))
+								) : (
+									"—"
+								)}
+							</dd>
+						</dl>
+
+						{evt.content ? (
+							<div>
+								<p className="mt-1 whitespace-pre-wrap text-sm text-zinc-900 dark:text-zinc-50">
+									{evt.content}
+								</p>
+							</div>
+						) : null}
+					</div>
+				),
+			};
+		});
 	const latest = personEvents[0] ?? null;
 	const sources = Array.from(
 		new Set(personEvents.map((evt) => sourceLabel(evt.source))),
@@ -70,18 +160,15 @@ export default function PersonPage() {
 					sources={sources}
 				/>
 
-				{sightingMarkers.length ? (
+				{markers.length ? (
 					<section className="mt-4 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-900 dark:bg-black">
 						<div className="flex items-center justify-between gap-3">
-							<SectionTitle>Sightings Map</SectionTitle>
-							<span className="text-xs text-zinc-600 dark:text-zinc-400">
-								{sightingMarkers.length} pin{sightingMarkers.length === 1 ? "" : "s"}
-							</span>
+							<SectionTitle>Records Map</SectionTitle>
 						</div>
 
 						<div className="mt-4 overflow-hidden rounded-lg border border-zinc-200 dark:border-zinc-900">
 							<LeafletMap
-								markers={sightingMarkers}
+								markers={markers}
 								className="h-80 w-full"
 							/>
 						</div>
