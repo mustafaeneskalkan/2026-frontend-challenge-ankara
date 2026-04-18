@@ -74,13 +74,19 @@ export default function ChatPage() {
 						<div className="min-w-0">
 							<SectionTitle>Chat</SectionTitle>
 							<div className="mt-0.5 truncate text-sm text-zinc-600 dark:text-zinc-400">
-								<span className="font-medium text-zinc-900 dark:text-zinc-50">
+								<Link
+									href={`/people/${encodeURIComponent(participants.a.label)}`}
+									className="font-medium text-zinc-900 underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:text-zinc-50 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
+								>
 									{participants.a.label}
-								</span>
+								</Link>
 								<span className="mx-1">↔</span>
-								<span className="font-medium text-zinc-900 dark:text-zinc-50">
+								<Link
+									href={`/people/${encodeURIComponent(participants.b.label)}`}
+									className="font-medium text-zinc-900 underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:text-zinc-50 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
+								>
 									{participants.b.label}
-								</span>
+								</Link>
 							</div>
 						</div>
 
@@ -97,7 +103,6 @@ export default function ChatPage() {
 							{chronological.length ? (
 								chronological.map((evt) => {
 									const sender = evt.people[0] ?? "Unknown";
-									const senderSlug = evt.people[0] ? undefined : undefined;
 									const alignRight =
 										evt.people[0] &&
 										evt.people[1] &&
@@ -109,7 +114,16 @@ export default function ChatPage() {
 												<div className="max-w-[80%] rounded-lg border border-zinc-200 bg-white p-3 dark:border-zinc-900 dark:bg-black">
 													<div className="flex items-baseline justify-between gap-3">
 														<div className="truncate text-xs font-medium text-zinc-900 dark:text-zinc-50">
-															{sender}
+															{sender === "Unknown" ? (
+																sender
+															) : (
+																<Link
+																	href={`/people/${encodeURIComponent(sender)}`}
+																	className="underline decoration-zinc-400 underline-offset-2 hover:decoration-zinc-600 dark:decoration-zinc-500 dark:hover:decoration-zinc-300"
+																>
+																	{sender}
+																</Link>
+															)}
 														</div>
 														<div className="shrink-0 text-xs text-zinc-500 dark:text-zinc-400">
 															{evt.timestampText || "—"}
