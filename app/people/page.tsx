@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Badge } from "@/components/Investigation/Badge";
 import { SectionTitle } from "@/components/Investigation/SectionTitle";
 import { useInvestigation } from "@/components/Investigation/InvestigationContext";
+import { sourceLabel } from "@/components/Investigation/utils";
 
 export default function PeoplePage() {
 	const { people, byPerson, events } = useInvestigation();
@@ -33,19 +34,37 @@ export default function PeoplePage() {
 												href={`/people/${encodeURIComponent(person.label)}`}
 												className="flex flex-col gap-1 px-3 py-2 text-left text-sm bg-white text-zinc-700 hover:bg-zinc-50 dark:bg-black dark:text-zinc-300 dark:hover:bg-zinc-950"
 											>
-												<div className="flex items-center justify-between gap-2">
-													<span className="truncate font-medium text-zinc-900 dark:text-zinc-50">
-														{person.label}
-													</span>
-													{latest ? (
-														<span className="shrink-0 text-xs text-zinc-500 dark:text-zinc-400">
-															{latest.timestampText}
-														</span>
+												<div className="flex items-start justify-between gap-3">
+													<div className="min-w-0">
+														<div className="flex min-w-0 items-baseline gap-2">
+															<span className="truncate font-medium text-zinc-900 dark:text-zinc-50">
+																{person.label}
+															</span>
+													</div>
+
+													{latest?.content ? (
+														<p className="truncate text-xs text-zinc-600 dark:text-zinc-400">
+															{`Last Activity: ${latest.content}`}
+														</p>
 													) : null}
 												</div>
+
+												{latest ? (
+													<div className="shrink-0 text-right">
+														<div className="text-[11px] text-zinc-500 dark:text-zinc-400">
+															Latest
+														</div>
+														<div className="text-xs text-zinc-700 dark:text-zinc-300">
+															{latest.timestampText}
+														</div>
+													</div>
+												) : null}
+											</div>
+
 												<div className="flex flex-wrap items-center gap-2">
 													<Badge>{person.count} records</Badge>
-													{latest?.location ? <Badge>{latest.location}</Badge> : null}
+													{latest?.reliability ? <Badge> Reliability: {latest.reliability}</Badge> : null}
+													{latest?.location ? <Badge>Last seen at: {latest.location}</Badge> : null}
 												</div>
 											</Link>
 										</li>
