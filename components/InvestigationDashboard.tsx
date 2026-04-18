@@ -98,9 +98,6 @@ export default function InvestigationDashboard() {
 
               {evt.content ? (
                 <div>
-                  <div className="text-xs text-zinc-500 dark:text-zinc-400">
-                    Content:
-                  </div>
                   <p className="mt-1 whitespace-pre-wrap text-sm text-zinc-900 dark:text-zinc-50">
                     {evt.content}
                   </p>

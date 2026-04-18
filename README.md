@@ -46,7 +46,7 @@ If `JOTFORM_API_KEY` is not set, the app will not load any records.
 
 ### 3) Running the application 
 
-# First create an env file with api key
+# First create a .env file with api key
 Check .env.example for that 
 
 ## For running developement build of next.js itself run in order 
