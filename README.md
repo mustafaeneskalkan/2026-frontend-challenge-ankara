@@ -44,13 +44,31 @@ Form IDs:
 
 If `JOTFORM_API_KEY` is not set, the app will not load any records.
 
-### 3) Run
+### 3) Running the application 
+
+# First create an env file with api key
+Check .env.example for that 
+
+## For running developement build of next.js itself run in order 
 
 ```bash
+npm install 
+
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+Default port is 3000, so open http://localhost:3000 or just press it from terminal itself.
+
+## For building and starting production ready app 
+
+
+```bash
+npm install 
+
+npm run build 
+
+npm run start
+```
 
 # 🚀 Challenge Duyurusu
 
