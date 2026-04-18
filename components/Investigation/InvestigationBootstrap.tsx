@@ -11,7 +11,7 @@ export default async function InvestigationBootstrap(props: {
 }) {
   const apiKey = process.env.JOTFORM_API_KEY;
 
-  const data = await getInvestigationData({ apiKey, revalidateSeconds: 300 });
+  const data = await getInvestigationData({ apiKey });
   const events: InvestigationEventView[] = data.events.map((evt) => ({
     key: evt.key,
     source: evt.source,

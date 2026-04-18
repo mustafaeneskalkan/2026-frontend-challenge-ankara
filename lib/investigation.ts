@@ -5,6 +5,7 @@ import {
   SOURCE_LABELS,
   type InvestigationSource,
 } from "@/lib/sources";
+import { getJotformRevalidateSeconds } from "@/lib/env";
 import { parseCoordinates, parseTimestampToMs } from "@/lib/time";
 
 export type { InvestigationSource } from "@/lib/sources";
@@ -259,7 +260,7 @@ export async function getInvestigationData(options?: {
   revalidateSeconds?: number;
 }): Promise<InvestigationData> {
   const apiKey = options?.apiKey;
-  const revalidateSeconds = options?.revalidateSeconds ?? 300;
+  const revalidateSeconds = options?.revalidateSeconds ?? getJotformRevalidateSeconds();
 
   const sources = ALL_SOURCES;
 

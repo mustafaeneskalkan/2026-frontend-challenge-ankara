@@ -36,7 +36,7 @@ It pulls submissions from multiple Jotform forms (Checkins, Messages, Sightings,
 	- `location` + optional `coordinates`
 	- `content` (free text) + optional `reliability` (e.g. urgency/confidence)
 - Merges all sources into one array and sorts newest-first to form the “global timeline”.
-- Uses Next.js caching with revalidation (default ~5 minutes) so data stays reasonably fresh without repeatedly hitting the external API.
+- Uses Next.js caching with revalidation (default ~5 minutes) so data stays reasonably fresh without repeatedly hitting the external API. Configure via `JOTFORM_REVALIDATE_SECONDS` (seconds).
 
 ### UI features
 - **Investigation dashboard**: record list + record detail panel; “linked records” are computed by shared people across events.
@@ -73,6 +73,9 @@ Then set your API key:
 
 ```bash
 JOTFORM_API_KEY=your_api_key_here
+
+# Optional: override fetch cache revalidation time (seconds)
+JOTFORM_REVALIDATE_SECONDS=300
 ```
 
 The app fetches data from:

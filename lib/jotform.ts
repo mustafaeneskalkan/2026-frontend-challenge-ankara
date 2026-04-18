@@ -1,4 +1,5 @@
 import type { InvestigationSource } from "@/lib/sources";
+import { getJotformRevalidateSeconds } from "@/lib/env";
 
 export type JotformAnswer = {
   name?: string;
@@ -51,7 +52,8 @@ export async function fetchJotformSubmissions(options: {
   apiKey?: string;
   revalidateSeconds?: number;
 }): Promise<{ submissions: JotformSubmission[]; from: "api" }> {
-  const { formId, source, apiKey, revalidateSeconds = 300 } = options;
+  const { formId, source, apiKey } = options;
+  const revalidateSeconds = options.revalidateSeconds ?? getJotformRevalidateSeconds();
 
   if (!apiKey) {
     throw new Error("Missing JOTFORM_API_KEY");
